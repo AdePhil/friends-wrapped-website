@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Box, Stack, Text } from "@chakra-ui/react";
 import { Linden_Hill } from "next/font/google";
-import Router from "next/router";
+import Footer from "@/components/footer";
 
 const font = Linden_Hill({
   subsets: ["latin"],
@@ -21,8 +21,8 @@ export default function InvitePage() {
     }, 1000);
   }, []);
   return (
-    <Box w="100%" minH="100vh" bg="#008BFF" display="flex" flexDir="column">
-      <Box as="main" position="relative" overflow="hidden">
+    <Box w="100%" bg="#008BFF" display="flex" flexDir="column">
+      <Box as="main" position="relative" overflow="hidden" minH="100vh">
         <Box
           bg="#f16806"
           right="-83px"
@@ -55,7 +55,6 @@ export default function InvitePage() {
             textAlign="center"
             color="white"
             lineHeight="144px"
-            mb="14"
           >
             YOU’RE IN
           </Text>
@@ -64,6 +63,7 @@ export default function InvitePage() {
           </Text>
         </Stack>
       </Box>
+      <Footer />
     </Box>
   );
 }

@@ -1,11 +1,11 @@
 import Image from "next/image";
-// import styles from './page.module.css'
 import { Box, Stack, Text, Button, VStack } from "@chakra-ui/react";
+import Footer from "@/components/footer";
 
 export default function DownloadPage() {
   return (
-    <Box w="100%" minH="100vh" display="flex" bg="#000000" flexDir="column">
-      <Box position="relative" overflow="hidden">
+    <Box w="100%" display="flex" bg="#000000" flexDir="column">
+      <Box position="relative" overflow="hidden" minH="100vh">
         <Box
           bg="#f16806"
           right="-83px"
@@ -80,6 +80,7 @@ export default function DownloadPage() {
           </VStack>
         </Stack>
       </Box>
+      <Footer />
     </Box>
   );
 }
