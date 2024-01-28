@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Box, Stack, Text, Button, VStack } from "@chakra-ui/react";
 
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,26 +50,28 @@ export default function Home() {
               See your friend wrapped
             </Text>
             <VStack spacing="4" mt="7">
-              <Button
-                w="165px"
-                h="50px"
-                justifyContent="flex-start"
-                leftIcon={
-                  <Image
-                    src="/apple-store.svg"
-                    alt="Play Store"
-                    width="29"
-                    height="33"
-                  />
-                }
-              >
-                <VStack align="start" spacing="0">
-                  <Text fontSize="10px" fontWeight="light">
-                    Download on the
-                  </Text>
-                  <Text>App Store</Text>
-                </VStack>
-              </Button>
+              <Link href="https://apps.apple.com/gb/app/friend-wrapped/id6475646063">
+                <Button
+                  w="165px"
+                  h="50px"
+                  justifyContent="flex-start"
+                  leftIcon={
+                    <Image
+                      src="/apple-store.svg"
+                      alt="Play Store"
+                      width="29"
+                      height="33"
+                    />
+                  }
+                >
+                  <VStack align="start" spacing="0">
+                    <Text fontSize="10px" fontWeight="light">
+                      Download on the
+                    </Text>
+                    <Text>App Store</Text>
+                  </VStack>
+                </Button>
+              </Link>
               <Button
                 w="165px"
                 h="50px"
@@ -84,7 +87,7 @@ export default function Home() {
               >
                 <VStack align="start" spacing="0">
                   <Text fontSize="10px" fontWeight="light">
-                    Get it on
+                    Coming Soon
                   </Text>
                   <Text>Google Play</Text>
                 </VStack>
